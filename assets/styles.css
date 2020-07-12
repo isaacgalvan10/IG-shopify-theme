@@ -84,7 +84,7 @@ header .menu .dropdown .sub-menu:hover {
   display: block;
 }
 
-header .mobile .link {
+header .mobile-menu .link {
   display: none;
 }
 
@@ -92,7 +92,7 @@ header .menu .open-mobile-menu {
   display: none;
 }
 
-header .mobile .open-mobile-menu {
+header .mobile-menu .open-mobile-menu {
   display: block;
   color: white;
   font-size: 1.5rem;
@@ -107,6 +107,7 @@ header .mobile .open-mobile-menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 #jumbo {
@@ -159,8 +160,8 @@ header .mobile .open-mobile-menu {
   font-size: 7rem;
   font-weight: 900;
   text-transform: uppercase;
-  -webkit-transform: translate3d(100px, 0, 0);
-          transform: translate3d(100px, 0, 0);
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
 }
 
 #jumbo .titles h2 {
@@ -168,8 +169,8 @@ header .mobile .open-mobile-menu {
   font-size: 5rem;
   font-weight: 200;
   text-transform: uppercase;
-  -webkit-transform: translate3d(135px, 0, 0);
-          transform: translate3d(135px, 0, 0);
+  -webkit-transform: translateX(135px);
+          transform: translateX(135px);
 }
 
 #jumbo .state {
@@ -227,20 +228,28 @@ header .mobile .open-mobile-menu {
   overflow: hidden;
 }
 
-#two-collections .left-c .left-c-img {
-  position: relative;
+#two-collections .left-c .left-c-bg {
+  background: rgba(255, 255, 0, 0.5);
   height: 500px;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#two-collections .left-c .left-c-img img {
-  width: 100%;
-  height: 500px;
+#two-collections .left-c .left-c-bg .left-c-img {
+  height: 400px;
+  width: 400px;
 }
 
-#two-collections .left-c .left-c-img .overlay {
-  position: absolute;
-  background: rgba(255, 255, 0, 0.4);
+#two-collections .left-c .left-c-bg img {
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   width: 100%;
 }
@@ -280,8 +289,8 @@ header .mobile .open-mobile-menu {
 }
 
 #two-collections .right-c-bg .right-c-img {
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: 400px;
 }
 
 #two-collections .right-c-bg img {
@@ -505,6 +514,8 @@ footer .address {
   z-index: 20;
   padding: 20px;
   display: none;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 #mobile-menu .logo {
@@ -554,10 +565,61 @@ footer .address {
           align-items: center;
   font-size: 1.5rem;
   position: absolute;
-  right: 0;
+  right: 40px;
+  top: -5px;
+  cursor: pointer;
 }
 
 #mobile-menu.active {
   display: block;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #horizontal-img .overlay .percent-number {
+    font-size: 15rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  #jumbo .titles h1 {
+    font-size: 4rem;
+  }
+  #jumbo .titles h2 {
+    font-size: 3rem;
+  }
+  #horizontal-img .overlay .percent-number {
+    font-size: 12rem;
+  }
+  #horizontal-img .overlay .title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 575px) {
+  header .logo a {
+    font-size: 1.5rem;
+  }
+  #mobile-menu .close-mobile-menu {
+    right: 0;
+  }
+  #jumbo .state .number {
+    font-size: 3rem;
+  }
+  #jumbo .titles {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+  #jumbo .titles h1 {
+    font-size: 3rem;
+  }
+  #jumbo .titles h2 {
+    font-size: 1.8rem;
+  }
+  #horizontal-img .overlay .percent-number {
+    font-size: 10rem;
+  }
+  #horizontal-img .overlay .title {
+    font-size: 3rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
