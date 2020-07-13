@@ -27,7 +27,6 @@ header {
   height: 60px;
   padding: 0 10%;
   z-index: 10;
-  overflow: hidden;
 }
 
 header .logo a {
@@ -377,9 +376,8 @@ header .mobile-menu .open-mobile-menu {
   margin-bottom: 50px;
 }
 
-#products-group .product-bg {
-  background: white;
-  color: yellow;
+#products-group .product-item {
+  color: black;
   height: 100%;
   min-height: 300px;
   display: -webkit-box;
@@ -398,9 +396,20 @@ header .mobile-menu .open-mobile-menu {
   position: relative;
   text-decoration: none;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
-#products-group .product-bg .overlay {
+#products-group .product-item .product-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+#products-group .product-item .product-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#products-group .product-item .overlay {
   background: rgba(100, 100, 100, 0.7);
   position: absolute;
   height: 100%;
@@ -421,21 +430,10 @@ header .mobile-menu .open-mobile-menu {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  cursor: pointer;
 }
 
-#products-group .product-bg .overlay:hover {
+#products-group .product-item .overlay:hover {
   opacity: 1;
-}
-
-#products-group .product-bg .overlay .product-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-#products-group .product-bg .overlay .product-price {
-  font-size: 1.2rem;
-  font-weight: 600;
 }
 
 #products-group .product-img {

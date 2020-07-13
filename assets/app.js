@@ -233,7 +233,7 @@ let horizontalScene = new ScrollMagic.Scene({
 
 const productsGroupTl = gsap.timeline();
 productsGroupTl.fromTo(
-  "#products-group .product-bg",
+  "#products-group .product-item",
   {
     opacity: 0,
     y: 100,
